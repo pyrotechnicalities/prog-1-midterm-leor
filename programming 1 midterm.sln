@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34202.233
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "programming 1 midterm", "programming 1 midterm\programming 1 midterm.csproj", "{64AB5CFD-81FF-485D-9E11-159793FEA124}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{64AB5CFD-81FF-485D-9E11-159793FEA124}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64AB5CFD-81FF-485D-9E11-159793FEA124}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64AB5CFD-81FF-485D-9E11-159793FEA124}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64AB5CFD-81FF-485D-9E11-159793FEA124}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3A160207-CBD0-42EB-8790-D259460B7A48}
+	EndGlobalSection
+EndGlobal
