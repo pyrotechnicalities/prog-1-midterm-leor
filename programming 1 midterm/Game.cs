@@ -13,12 +13,15 @@ namespace MidtermLeftOrRight
         public void Start()
         {
             //store title art + start screen here, then kick over to PlayerCreate
+            //title art = ascii, says "left or right," also says "press any key to begin"
             Title = "Left or Right";
+            Clear();
+            WriteLine("Let us begin the game.");
             PlayerCreate();
         }
         public void PlayerCreate()
         {
-            WriteLine("What is your name, brave adventurer?");
+            WriteLine("\nWhat is your name, brave adventurer?");
             string playerName = ReadLine();
             WriteLine("Enter your hair color.");
             string hairColor = ReadLine();
