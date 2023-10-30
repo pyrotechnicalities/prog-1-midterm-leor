@@ -9,6 +9,9 @@ namespace MidtermLeftOrRight
 {
     internal class Win
     {
+        public static void WinConditionsMet()
+        {
 
+        }
     }
 }

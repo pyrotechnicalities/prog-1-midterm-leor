@@ -9,6 +9,13 @@ namespace MidtermLeftOrRight
 {
     internal class Lose
     {
-        //two lose conditions: LoseRefuseTheCall and LoseNotEnoughPoints
+        public static void LoseRefuseTheCall()
+        {
+
+        }
+        public static void LoseNotEnoughPoints()
+        {
+
+        }
     }
 }

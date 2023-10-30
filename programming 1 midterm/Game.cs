@@ -42,7 +42,7 @@ namespace MidtermLeftOrRight
                 Clear();
                 PlayerCreate();
             }
-            //might need exception handler?
+            // might need exception handler?
             
             CurrentPlayer = new Player(playerName, hairColor, eyeColor, weaponType);
         }
@@ -53,12 +53,12 @@ namespace MidtermLeftOrRight
             string gameStartResponse = ReadLine().Trim().ToUpper();
             if (gameStartResponse == "LEFT")
             {
-                //LeftPathGameplay();
-                //ask tutor about this later- need to call LeftPathGameplay from LeftPath.cs and I can't figure out how to get that to work
+                // LeftPathGameplay();
+                // ask tutor about this later- need to call LeftPathGameplay from LeftPath.cs and I can't figure out how to get that to work
             }
             else
             {
-                //RightPathGameplay();
+                // RightPathGameplay();
                 WriteLine("tba");
             }
         }

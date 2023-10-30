@@ -9,6 +9,9 @@ namespace MidtermLeftOrRight
 {
     internal class Credits
     {
+        public static void CreditsForThePlayer()
+        {
 
+        }
     }
 }
