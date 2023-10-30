@@ -9,6 +9,9 @@ namespace MidtermLeftOrRight
 {
     internal class RightPath
     {
+        public static void RightPathGameplay()
+        {
 
+        }
     }
 }

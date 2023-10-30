@@ -12,7 +12,7 @@ namespace MidtermLeftOrRight
         private Player CurrentPlayer;
         public void Start()
         {
-            //store title art + start screen here, then kick over to PlayerCreate
+            //store title art + start screen here
             //title art = ascii, says "left or right," also says "press any key to begin"
             Title = "Left or Right";
             Clear();
@@ -34,7 +34,8 @@ namespace MidtermLeftOrRight
             string creatorResponse = ReadLine().Trim().ToLower();
             if (creatorResponse == "yes")
             {
-                //start gameplay now
+                Clear();
+                GameStart();
             }
             else
             {
@@ -44,6 +45,22 @@ namespace MidtermLeftOrRight
             //might need exception handler?
             
             CurrentPlayer = new Player(playerName, hairColor, eyeColor, weaponType);
+        }
+        public void GameStart()
+        {
+            WriteLine("As our story begins, you live in a small, but reasonably prosperous, village– at least, as far as small villages go, anyway. The sun is shining down on you, the breeze is blowing, and overall you feel content with your life. Unbeknownst to you, many changes are heading your way… ");
+            WriteLine("\nWill you choose LEFT or RIGHT?");
+            string gameStartResponse = ReadLine().Trim().ToUpper();
+            if (gameStartResponse == "LEFT")
+            {
+                //LeftPathGameplay();
+                //ask tutor about this later- need to call LeftPathGameplay from LeftPath.cs and I can't figure out how to get that to work
+            }
+            else
+            {
+                //RightPathGameplay();
+                WriteLine("tba");
+            }
         }
     }
 }
