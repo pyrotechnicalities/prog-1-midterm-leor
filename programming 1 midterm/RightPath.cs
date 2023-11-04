@@ -11,7 +11,7 @@ namespace MidtermLeftOrRight
     {
         public static void RightPathGameplay()
         {
-
+            // asks you to set the name/appearance/etc of your best friend before the actual gameplay starts
         }
     }
 }
