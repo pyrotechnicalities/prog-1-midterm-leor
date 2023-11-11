@@ -9,6 +9,11 @@ namespace MidtermLeftOrRight
 {
     internal class RightPath
     {
+        public Player CurrentPlayer;
+        public RightPath(Player placeholder)
+        {
+            CurrentPlayer = placeholder;
+        }
         public static void RightPathGameplay()
         {
             // asks you to set the name/appearance/etc of your best friend before the actual gameplay starts

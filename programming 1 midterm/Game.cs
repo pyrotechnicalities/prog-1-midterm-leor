@@ -9,7 +9,9 @@ namespace MidtermLeftOrRight
 {
     internal class Game
     {
-        private Player CurrentPlayer;
+        Player CurrentPlayer;
+        private LeftPath LeftPath;
+        private RightPath RightPath;
         public void Start()
         {
             //store title art + start screen here
@@ -45,20 +47,23 @@ namespace MidtermLeftOrRight
             // might need exception handler?
             
             CurrentPlayer = new Player(playerName, hairColor, eyeColor, weaponType);
+            
         }
         public void GameStart()
         {
+            LeftPath = new LeftPath(CurrentPlayer);
+            RightPath = new RightPath(CurrentPlayer);
             WriteLine("As our story begins, you live in a small, but reasonably prosperous, village– at least, as far as small villages go, anyway. The sun is shining down on you, the breeze is blowing, and overall you feel content with your life. Unbeknownst to you, many changes are heading your way… ");
             WriteLine("\nWill you choose LEFT or RIGHT?");
             string gameStartResponse = ReadLine().Trim().ToUpper();
             if (gameStartResponse == "LEFT")
             {
-                // LeftPathGameplay();
-                // ask tutor about this later- need to call LeftPathGameplay from LeftPath.cs and I can't figure out how to get that to work
+                LeftPath.LeftPathGameplay(true);
+                
             }
             else
             {
-                // RightPathGameplay();
+                RightPath.RightPathGameplay();
                 WriteLine("tba");
             }
         }

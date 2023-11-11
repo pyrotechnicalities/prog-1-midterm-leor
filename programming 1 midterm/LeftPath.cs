@@ -13,8 +13,14 @@ namespace MidtermLeftOrRight
     internal class LeftPath
     {
         bool hasGawain;
+        public Player CurrentPlayer;
+        public LeftPath(Player placeholder)
+        {
+            CurrentPlayer = placeholder;
+        }
         public void LeftPathGameplay(bool hasGawain)
         {
+            
             WriteLine("Given that today is such a wonderful day, you decide to take a simple stroll down to the market to see if you can overhear any interesting new gossip. As you reach the center square, you spot the general store shopkeeper and one of the waiters from the inn deep in heated discussion. Intrigued, you decide to move closer. ");
             ReadKey();
             WriteLine("\nSHOPKEEPER: So, anyway, that’s all I’ve heard about the ring.");
@@ -49,7 +55,7 @@ namespace MidtermLeftOrRight
 
                     if (responseSearchForRing == "A")
                     {
-                        WriteLine($"This whole ring business is still a little mysterious to you, but you never have been able to resist a good challenge. Besides, the power to grant wishes could literally change your life! With this in mind, you briefly stop by the armorer to grab a {weaponType}. You can never be too careful with this kind of thing. Once that’s sorted out, you head out to the western road to begin your journey to find this mystical ring!");
+                        WriteLine($"This whole ring business is still a little mysterious to you, but you never have been able to resist a good challenge. Besides, the power to grant wishes could literally change your life! With this in mind, you briefly stop by the armorer to grab a {CurrentPlayer.WeaponType}. You can never be too careful with this kind of thing. Once that’s sorted out, you head out to the western road to begin your journey to find this mystical ring!");
                         SeekRingPartOne(false);
                     }
                     else
@@ -91,7 +97,7 @@ namespace MidtermLeftOrRight
 
                     if (responseSearchForRing == "A")
                     {
-                        WriteLine($"This whole ring business is still a little mysterious to you, but you never have been able to resist a good challenge. Besides, the power to grant wishes could literally change your life! With this in mind, you briefly stop by the armorer to grab a {weaponType}. You can never be too careful with this kind of thing. Once that’s sorted out, you head out to the western road to begin your journey to find this mystical ring!");
+                        WriteLine($"This whole ring business is still a little mysterious to you, but you never have been able to resist a good challenge. Besides, the power to grant wishes could literally change your life! With this in mind, you briefly stop by the armorer to grab a {CurrentPlayer.WeaponType}. You can never be too careful with this kind of thing. Once that’s sorted out, you head out to the western road to begin your journey to find this mystical ring!");
                         SeekRingPartOne(false);
                     }
                     else
@@ -108,10 +114,9 @@ namespace MidtermLeftOrRight
                 }
             }
         }
-        public static void ArmorerDialogue(bool hasGawain)
+        public void ArmorerDialogue(bool hasGawain)
         {
-            WriteLine($"Oh, hey {playerName}. What can I do for you today?");
-            // ask about the playerName error
+            WriteLine($"Oh, hey {CurrentPlayer.Name}. What can I do for you today?");
             ReadKey();
             WriteLine("\n'I want to ask about the rumors of a magical ring.'");
             ReadKey();
@@ -128,18 +133,20 @@ namespace MidtermLeftOrRight
                 ArmorerDialogue2(false);
             }
         }
-        public static void ArmorerDialogue2(bool hasGawain)
+        public void ArmorerDialogue2(bool hasGawain)
         {
-            WriteLine($"ARMORER: You heard me correctly. That poor soul died, but it’s only made the ring more enticing for other treasure seekers. If you wish to pursue it, you should act quickly. But, don’t forget to take {weaponType} with you! It’s always good to be prepared.");
+            
+            WriteLine($"ARMORER: You heard me correctly. That poor soul died, but it’s only made the ring more enticing for other treasure seekers. If you wish to pursue it, you should act quickly. But, don’t forget to take {CurrentPlayer.WeaponType} with you! It’s always good to be prepared.");
             ReadKey();
             WriteLine("'Thank you.'");
-            WriteLine($"You take your leave from the armorer’s shop, {weaponType} in hand, and once again find yourself faced with a decision. You feel like you have enough information to go on now, so it’s time to go after the ring. And yet, something makes you pause- this ring seems to have a mysterious curse that kills people who touch it. Still, the power to grant wishes is something spectacular indeed… it might be worth your while to at least LOOK for it.");
+            WriteLine($"You take your leave from the armorer’s shop, {CurrentPlayer.WeaponType} in hand, and once again find yourself faced with a decision. You feel like you have enough information to go on now, so it’s time to go after the ring. And yet, something makes you pause- this ring seems to have a mysterious curse that kills people who touch it. Still, the power to grant wishes is something spectacular indeed… it might be worth your while to at least LOOK for it.");
             ReadKey();
             WriteLine("\nWith your mind made up, you head out to the western road, prepared to begin your journey to find this mystical ring!");
             SeekRingPartOne(false);
         }
-        public static void SeekRingPartOne(bool hasGawain)
+        public void SeekRingPartOne(bool hasGawain)
         {
+            
             WriteLine("As you continue down the road, feeling pretty good about your decisions- after all, today is a gorgeous day, and you haven’t seen any other treasure seekers on the road so far. As far as you’re concerned, you’re the only one who has actually bothered to go out and try to seek the ring. That is, until you stumble upon a fellow with white hair dressed in the armor of a paladin standing in the road and looking awfully lost.");
             ReadKey();
             WriteLine("What would you like to do? A. Ask him if he needs help with something or B. Ignore him. He’s probably a brigand waiting to take advantage of an unsuspecting adventurer such as yourself.");
@@ -165,17 +172,16 @@ namespace MidtermLeftOrRight
                     {
                         WriteLine("Gawain: Perfect! Would you mind if I accompanied you? I’m quite capable with a sword, should we run into any trouble, and I’ve been traveling by myself for quite some time. I think the company would do me some good.");
                         ReadKey();
-                        WriteLine($"A. 'Sure, why not? The name’s {playerName}. Nice to meet you.' or B. 'No thanks. The lair is straight west of here, though.'");
+                        WriteLine($"A. 'Sure, why not? The name’s {CurrentPlayer.Name}. Nice to meet you.' or B. 'No thanks. The lair is straight west of here, though.'");
                         string responseGawainComesWithYou = ReadLine().Trim().ToUpper();
 
                         if (responseGawainComesWithYou == "A")
                         {
-                            WriteLine($"Gawain: Well met, {playerName}! I won’t let you down.");
+                            WriteLine($"Gawain: Well met, {CurrentPlayer.Name}! I won’t let you down.");
                             ReadKey();
                             WriteLine("Thus, Gawain joins you on your quest, and the two of you continue further down the road.");
                             hasGawain = true;
-                            Score++;
-                            // this is a similar error that I've been running into this whole time, can't get things to transfer between class files??
+                            CurrentPlayer.Score++;
                             SeekRingPartTwo(true);
                         }
                         else
