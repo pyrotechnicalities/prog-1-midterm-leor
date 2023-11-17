@@ -11,7 +11,8 @@ namespace MidtermLeftOrRight
     {
         public static void CreditsForThePlayer()
         {
-
+            // code: Leo Richnofsky
+            // some code assistance provided by Dominic F
         }
     }
 }

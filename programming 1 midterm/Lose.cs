@@ -13,7 +13,11 @@ namespace MidtermLeftOrRight
         {
 
         }
-        public static void LoseNotEnoughPoints()
+        public static void LoseNotEnoughPointsLeft()
+        {
+
+        }
+        public static void LoseNotEnoughPointsRight()
         {
 
         }

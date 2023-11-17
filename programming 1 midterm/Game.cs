@@ -59,7 +59,6 @@ namespace MidtermLeftOrRight
             if (gameStartResponse == "LEFT")
             {
                 LeftPath.LeftPathGameplay(true);
-                
             }
             else
             {
