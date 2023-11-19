@@ -19,7 +19,7 @@ namespace MidtermLeftOrRight
             }
             public int Roll()
             {
-                return random.Next();
+               return random.Next();
             }
 
             Dice d20 = new Dice();

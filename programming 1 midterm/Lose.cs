@@ -61,7 +61,7 @@ namespace MidtermLeftOrRight
                 ReadKey();
                 WriteLine("\n\n===== THE END =====");
 
-                CreditsForThePlayer();
+               CreditsForThePlayer();
             }
             else
             {

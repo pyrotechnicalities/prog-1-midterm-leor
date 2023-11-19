@@ -232,7 +232,7 @@ namespace MidtermLeftOrRight
                 WriteLine("OLD WOMAN: My poor cat Scrunkles has gotten himself stuck in a tree!");
                 ReadKey();
                 WriteLine($"Gawain: Oh dear… well, {CurrentPlayer.Name}, it’s your choice. What should we do?");
-                ReadKey(); 
+                ReadKey();
                 WriteLine("A. 'We’ll help you out. Where is he?' or B. 'Sorry, lady, we’re on a very important quest. Hope you get him back soon.'");
                 string responseEncounterOneDialogue1 = ReadLine().Trim().ToUpper();
 
@@ -245,17 +245,17 @@ namespace MidtermLeftOrRight
                 }
                 else
                 {
-                    WriteLine("\nOLD WOMAN: Oh… I see… well, I’ll just wait for someone else, then…"); 
-                    ReadKey(); 
+                    WriteLine("\nOLD WOMAN: Oh… I see… well, I’ll just wait for someone else, then…");
+                    ReadKey();
                     WriteLine($"Gawain: (whispering) {CurrentPlayer.Name}, are you sure this is the right choice?");
                     ReadKey();
                     WriteLine("A. 'Yes.' or B. 'No.'");
                     string responseEncounterOneDialogue2 = ReadLine().Trim().ToUpper();
 
-                    if ( responseEncounterOneDialogue2 == "A")
+                    if (responseEncounterOneDialogue2 == "A")
                     {
                         WriteLine("\nGawain: Alright. Good day to you, friend. I hope you find a solution to your problem soon.");
-                        ReadKey(); 
+                        ReadKey();
                         WriteLine("OLD WOMAN: (talking to herself) Oh, Scrunkles…");
                         ReadKey();
                         WriteLine("You and Gawain continue on your adventure, leaving the old woman behind to fret over her cat. Womp womp.");
@@ -264,7 +264,7 @@ namespace MidtermLeftOrRight
                     else
                     {
                         WriteLine("Gawain: We’ll help you after all.");
-                        ReadKey(); 
+                        ReadKey();
                         WriteLine("OLD WOMAN: What a relief!");
                         EncounterOneCheckWithGawain();
                     }
@@ -417,7 +417,6 @@ namespace MidtermLeftOrRight
         }
         public void EncounterTwoCheckWithGawain()
         {
-            // roll logic
             Roll();
 
             if (Roll >= 10)
@@ -711,7 +710,6 @@ namespace MidtermLeftOrRight
             }
             else
             {
-                // no gawain final encounter
                 WriteLine("\nAt long last, the dragon’s lair is in view. You are filled with a deep sense of relief upon seeing the ominous mouth of the cave where you know the treasure lies, which is something that you can’t say you’ve ever expected to feel upon seeing a cave like that. This is it! Your journey is at an end! What a relief.");
                 ReadKey();
                 WriteLine("You enter the dragon’s lair. Piles and piles of gold and trinkets are stacked around a massive hollow where the dragon must have slept. At this rate it’ll take you forever to find the ring… but there’s nothing to do but get searching. That is, until you notice a skeleton in the center of the room with something gripped tightly in its bony hands. The sight of the skeleton makes you pause, but you approach it all the same. You break the skeleton’s grip and a plain golden ring clatters to the ground. Before you can let your fears get the better of you, you pick it up. Immediately, a ghostly voice echoes in your ear.");
