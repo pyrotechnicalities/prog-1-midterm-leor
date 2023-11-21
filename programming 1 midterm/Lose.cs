@@ -1,4 +1,5 @@
-﻿using System;
+﻿using programming_1_midterm;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,7 +10,13 @@ namespace MidtermLeftOrRight
 {
     internal class Lose
     {
-        public static void LoseRefuseTheCall(bool hasGawain)
+        public Friend CurrentFriend;
+        private Credits ToCredits;
+        public Lose()
+        {
+
+        }
+        public void LoseRefuseTheCall(bool hasGawain)
         {
             if (hasGawain == true)
             {
@@ -34,7 +41,7 @@ namespace MidtermLeftOrRight
                 ReadKey();
                 WriteLine("\n\n===== THE END =====");
 
-                CreditsForThePlayer();
+                ToCredits.CreditsForThePlayer();
             }
             else
             {
@@ -46,10 +53,10 @@ namespace MidtermLeftOrRight
                 ReadKey();
                 WriteLine("\n\n===== THE END =====");
 
-                CreditsForThePlayer();
+                ToCredits.CreditsForThePlayer();
             }
         }
-        public static void LoseNotEnoughPointsLeft(bool hasGawain)
+        public void LoseNotEnoughPointsLeft(bool hasGawain)
         {
             if (hasGawain == true)
             {
@@ -61,7 +68,7 @@ namespace MidtermLeftOrRight
                 ReadKey();
                 WriteLine("\n\n===== THE END =====");
 
-               CreditsForThePlayer();
+               ToCredits.CreditsForThePlayer();
             }
             else
             {
@@ -73,12 +80,35 @@ namespace MidtermLeftOrRight
                 ReadKey();
                 WriteLine("\n\n===== THE END =====");
 
-                CreditsForThePlayer();
+                ToCredits.CreditsForThePlayer();
             }
         }
-        public static void LoseNotEnoughPointsRight()
+        public void LoseNotEnoughPointsRight(bool hasBestFriend)
         {
+            if (hasBestFriend == true)
+            {
+                WriteLine("\nThe voices fade away and the lake itself freezes over, trapping the canteen inside it. Before you can really process what’s happening, your best friend pulls you away from the lake’s edge, eyes wide and focused on the now frozen surface of the lake. You stare at it along with them, certain that if your best friend hadn’t saved you, you too would now be nothing more than a frozen statue along the lake’s edge.");
+                ReadKey();
+                WriteLine($"{CurrentFriend.BestFriendName}: DUDE. I thought she was kidding about that whole judgment thing. This is insane! Let’s get out of here.");
+                ReadKey();
+                WriteLine("You nod and the two of you hurry away from the frozen lake, eager to get away from the site of your failure. The walk of shame back to the apothecary’s shop is truly torturous, but you know that deep down you deserve it. After all, you were judged poorly by the lake.");
+                ReadKey();
+                WriteLine("After enduring the apothecary’s withering stare of disappointment, you and your best friend part ways for the day, feeling like you need several days to recover from the sheer humiliation you just felt. Ah well. You’ll have another day to try again. For now, though, you’ve got to rest.");
+                ReadKey();
+                WriteLine("\n\n===== THE END =====");
 
+                ToCredits.CreditsForThePlayer();
+            }
+            else
+            {
+                WriteLine("\nThe voices fade away and the lake itself freezes over, trapping the canteen inside it. A cold sensation races up your hand, and with icy horror seeping into your throat, you realize you can’t pull your hand off of the canteen. You struggle against it for several long moments as your joints begin to go stiff and it gets harder to fight against the powerful magic freezing you in place. Finally, as your whole body stills, you cry out for help, only for the syllables to be cut off as the freezing curse fully takes effect.");
+                ReadKey(); 
+                WriteLine("\nYour last thought is that nobody will ever think to come looking for you at the lakeside.");
+                ReadKey();
+                WriteLine("\n\n===== THE END =====");
+
+                ToCredits.CreditsForThePlayer();
+            }
         }
     }
 }

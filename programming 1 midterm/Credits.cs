@@ -9,9 +9,13 @@ namespace MidtermLeftOrRight
 {
     internal class Credits
     {
-        public static void CreditsForThePlayer()
+        public Credits()
         {
-            // code: Leo Richnofsky
+
+        }
+        public void CreditsForThePlayer()
+        {
+            // code and story: Leo Richnofsky
             // some code assistance provided by Dominic F
         }
     }

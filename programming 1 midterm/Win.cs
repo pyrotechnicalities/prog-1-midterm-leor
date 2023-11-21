@@ -1,4 +1,5 @@
-﻿using System;
+﻿using programming_1_midterm;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,7 +10,13 @@ namespace MidtermLeftOrRight
 {
     internal class Win
     {
-        public static void WinConditionsMetLeft(bool hasGawain)
+        public Friend CurrentFriend;
+        private Credits ToCredits;
+        public Win()
+        {
+            
+        }
+        public void WinConditionsMetLeft(bool hasGawain)
         {
             if(hasGawain == true)
             {
@@ -27,7 +34,7 @@ namespace MidtermLeftOrRight
                 ReadKey();
                 WriteLine("\n\n===== THE END =====");
 
-                CreditsForThePlayer();
+                ToCredits.CreditsForThePlayer();
             }
             else
             {
@@ -37,12 +44,46 @@ namespace MidtermLeftOrRight
                 ReadKey();
                 WriteLine("\n\n===== THE END =====");
 
-                CreditsForThePlayer();
+                ToCredits.CreditsForThePlayer();
             }
         }
-        public static void WinConditionsMetRight()
+        public void WinConditionsMetRight(bool hasBestFriend)
         {
+            if (hasBestFriend == true)
+            {
+                WriteLine("\nThe voices fade away and water begins to flow into the canteen. You exhale in relief. The lake has judged you worthy after all. You’re not sure what would happen if it hadn’t, but you don’t really want to find out. Once the canteen is full, you take it out of the water and recap it. Time to return to the village and hand the water to the apothecary!");
+                ReadKey();
+                WriteLine($"{CurrentFriend.BestFriendName}: Nice work! I was worried for a second there because you just froze up, but everything is fine, right?");
+                ReadKey();
+                WriteLine("A. 'Oh yeah. Piece of cake.' or B. 'Yeah, I’m all good.'");
+                string responseWinConditionRight = ReadLine().Trim().ToUpper();
 
+                if (responseWinConditionRight == "A")
+                {
+                    WriteLine($"\n{CurrentFriend.BestFriendName}: Good to hear. Well, let’s go back.");
+                }
+                else
+                {
+                    WriteLine($"\n{CurrentFriend.BestFriendName}: That's really good to hear. Well, let’s go back.");
+                }
+
+                ReadKey();
+                WriteLine("\nSo, the two of you return, victory held tight in your grasp. The apothecary thanks you profusely for your hard work, and now you’re totally free to do whatever you desire. Which, after such a day of chores, you’re thinking is sleep for a looooong time. You and your best friend part ways for the day, feeling well and truly accomplished. All is well.");
+                ReadKey();
+                WriteLine("\n\n===== THE END =====");
+
+                ToCredits.CreditsForThePlayer();
+            }
+            else
+            {
+                WriteLine("\nThe voices fade away and water begins to flow into the canteen. You exhale in relief. The lake has judged you worthy after all. You’re not sure what would happen if it hadn’t, but you don’t really want to find out. Once the canteen is full, you take it out of the water and recap it. Time to return to the village and hand the water to the apothecary!");
+                ReadKey(); 
+                WriteLine("You return to your village, victory held tight in your grasp. The apothecary thanks you profusely for your hard work, and now you’re totally free to do whatever you desire. Which, after such a day of chores, you’re thinking is sleep for a looooong time. All is well. You remain entirely clueless to the danger you just put yourself in, and that’s just fine by you.");
+                ReadKey();
+                WriteLine("\n\n===== THE END =====");
+
+                ToCredits.CreditsForThePlayer();
+            }
         }
     }
 }

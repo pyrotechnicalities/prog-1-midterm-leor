@@ -17,6 +17,9 @@ namespace MidtermLeftOrRight
     {
         bool hasGawain;
         public Player CurrentPlayer;
+        private Win WinConditions;
+        private Lose LoseConditions;
+        private Random DiceRoll;
         public LeftPath(Player placeholder)
         {
             CurrentPlayer = placeholder;
@@ -295,8 +298,7 @@ namespace MidtermLeftOrRight
         }
         public void EncounterOneCheckWithGawain()
         {
-            // once again in need of the tutor here- similar issue that I was running into before, I think I might need to do the same thing but idk 
-            Roll();
+            DiceRoll.Roll();
 
             if (Roll >= 7)
             {
@@ -333,7 +335,7 @@ namespace MidtermLeftOrRight
         }
         public void EncounterOneCheckWithoutGawain()
         {
-            Roll();
+            DiceRoll.Roll();
 
             if (Roll >= 7)
             {
@@ -417,7 +419,7 @@ namespace MidtermLeftOrRight
         }
         public void EncounterTwoCheckWithGawain()
         {
-            Roll();
+            DiceRoll.Roll();
 
             if (Roll >= 10)
             {
@@ -462,7 +464,7 @@ namespace MidtermLeftOrRight
         }
         public void EncounterTwoCheckWithoutGawain()
         {
-            Roll();
+            DiceRoll.Roll();
 
             if (Roll >= 10)
             {
@@ -570,7 +572,7 @@ namespace MidtermLeftOrRight
         }
         public void EncounterThreeCheckWithGawain()
         {
-            Roll();
+            DiceRoll.Roll();
 
             if (Roll >= 13)
             {
@@ -637,7 +639,7 @@ namespace MidtermLeftOrRight
         }
         public void EncounterThreeCheckWithoutGawain()
         {
-            Roll();
+            DiceRoll.Roll();
 
             if (Roll >= 13)
             {
@@ -740,18 +742,18 @@ namespace MidtermLeftOrRight
                 if (CurrentPlayer.Score >= 4)
                 {
                     WriteLine("\nMYSTERIOUS VOICE: You are pure of heart enough to handle the ring. May you use its power for good, always, and never stray from your just path.");
-                    WinConditionsMetLeft(true);
+                    WinConditions.WinConditionsMetLeft(true);
                 }
                 else
                 {
                     WriteLine("\nMYSTERIOUS VOICE: You are not pure of heart enough to handle the ring. Begone, foul beast.");
-                    LoseNotEnoughPointsLeft(true);
+                    LoseConditions.LoseNotEnoughPointsLeft(true);
                 }
             }
             else
             {
                 WriteLine("\nMYSTERIOUS VOICE: Then put the ring down and walk away, never to handle it again upon pain of death.");
-                LoseRefuseTheCall(true);
+                LoseConditions.LoseRefuseTheCall(true);
             }
         }
         public void FinalEncounterCheckWithoutGawain()
@@ -778,18 +780,18 @@ namespace MidtermLeftOrRight
                 if (CurrentPlayer.Score >= 4)
                 {
                     WriteLine("\nMYSTERIOUS VOICE: You are pure of heart enough to handle the ring. May you use its power for good, always, and never stray from your just path.");
-                    WinConditionsMetLeft(false);
+                    WinConditions.WinConditionsMetLeft(false);
                 }
                 else
                 {
                     WriteLine("\nMYSTERIOUS VOICE: You are not pure of heart enough to handle the ring. Begone, foul beast.");
-                    LoseNotEnoughPointsLeft(false);
+                    LoseConditions.LoseNotEnoughPointsLeft(false);
                 }
             }
             else
             {
                 WriteLine("\nMYSTERIOUS VOICE: Then put the ring down and walk away, never to handle it again upon pain of death.");
-                LoseRefuseTheCall(false);
+                LoseConditions.LoseRefuseTheCall(false);
             }
         }
     }
