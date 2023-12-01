@@ -1,5 +1,4 @@
-﻿using programming_1_midterm;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -36,6 +35,9 @@ namespace MidtermLeftOrRight
             WriteLine($"Your name is {playerName}, your hair color is {hairColor}, your eye color is {eyeColor} and your preferred weapon is {weaponType}.");
             WriteLine("Is this correct? (yes/no)");
             string creatorResponse = ReadLine().Trim().ToLower();
+
+            CurrentPlayer = new Player(playerName, hairColor, eyeColor, weaponType);
+
             if (creatorResponse == "yes")
             {
                 Clear();
@@ -46,9 +48,6 @@ namespace MidtermLeftOrRight
                 Clear();
                 PlayerCreate();
             }
-            // might need exception handler?
-            
-            CurrentPlayer = new Player(playerName, hairColor, eyeColor, weaponType);
         }
         public void FriendCreate()
         {
@@ -64,6 +63,8 @@ namespace MidtermLeftOrRight
             WriteLine("Is this correct? (yes/no)");
             string friendCreatorResponse = ReadLine().Trim().ToLower();
 
+            CurrentFriend = new Friend(friendName, friendHairColor, friendEyeColor);
+
             if (friendCreatorResponse == "yes")
             {
                 Clear();
@@ -74,7 +75,6 @@ namespace MidtermLeftOrRight
                 Clear();
                 FriendCreate();
             }
-            CurrentFriend = new Friend(friendName, friendHairColor, friendEyeColor);
         }
             public void GameStart()
         {

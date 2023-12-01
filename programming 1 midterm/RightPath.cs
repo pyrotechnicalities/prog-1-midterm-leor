@@ -1,5 +1,4 @@
-﻿using programming_1_midterm;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,7 +14,7 @@ namespace MidtermLeftOrRight
         public Player CurrentPlayer;
         private Win WinConditions;
         private Lose LoseConditions;
-        private Random DiceRoll;
+        private Dice DiceRoll;
         public RightPath(Player placeholder, Friend placeholder2)
         {
             CurrentPlayer = placeholder;
@@ -25,7 +24,6 @@ namespace MidtermLeftOrRight
         {
             WriteLine("\nGiven that today is such a wonderful day, you decide to sleep in a little bit before you actually get a start on your day. Once you’re up and moving, much later in the afternoon than you would be on a normal day, you decide to take a simple stroll down to the market to see if you can overhear any interesting new gossip. As you reach the center square, you run into your best friend.");
             ReadKey();
-            // ask tutor about null error 
             WriteLine($"{CurrentFriend.BestFriendName}:  Oh, hey {CurrentPlayer.Name}.");
             ReadKey();
             WriteLine("A. 'Afternoon. Did I miss anything interesting?' or B. 'Hey. You seem a little distracted- everything okay?'");
@@ -239,7 +237,7 @@ namespace MidtermLeftOrRight
             }
             void EncounterOneCheckWithFriend()
             {
-                DiceRoll.Roll();
+                int Roll = DiceRoll.Roll();
 
                 if (Roll >= 7)
                 {
@@ -274,7 +272,7 @@ namespace MidtermLeftOrRight
             }
             void EncounterOneCheckWithoutFriend()
             {
-                DiceRoll.Roll();
+                int Roll = DiceRoll.Roll();
 
                 if (Roll >= 7)
                 {
@@ -410,7 +408,7 @@ namespace MidtermLeftOrRight
             }
             void EncounterTwoCheckWithFriend()
             {
-                DiceRoll.Roll();
+                int Roll = DiceRoll.Roll();
 
                 if (Roll >= 10)
                 {
@@ -447,7 +445,7 @@ namespace MidtermLeftOrRight
             }
             void EncounterTwoCheckWithoutFriend()
             {
-                DiceRoll.Roll();
+                int Roll = DiceRoll.Roll();
 
                 if (Roll >= 10)
                 {
@@ -561,7 +559,7 @@ namespace MidtermLeftOrRight
             }
             void EncounterThreeCheckWithFriend()
             {
-                DiceRoll.Roll();
+                int Roll = DiceRoll.Roll();
 
                 if (Roll >= 13)
                 {
@@ -606,7 +604,7 @@ namespace MidtermLeftOrRight
             }
             void EncounterThreeCheckWithoutFriend()
             {
-                DiceRoll.Roll();
+                int Roll = DiceRoll.Roll();
 
                 if (Roll >= 13)
                 {

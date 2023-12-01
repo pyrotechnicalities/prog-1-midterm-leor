@@ -19,7 +19,7 @@ namespace MidtermLeftOrRight
         public Player CurrentPlayer;
         private Win WinConditions;
         private Lose LoseConditions;
-        private Random DiceRoll;
+        private Dice DiceRoll;
         public LeftPath(Player placeholder)
         {
             CurrentPlayer = placeholder;
@@ -298,7 +298,7 @@ namespace MidtermLeftOrRight
         }
         public void EncounterOneCheckWithGawain()
         {
-            DiceRoll.Roll();
+            int Roll = DiceRoll.Roll();
 
             if (Roll >= 7)
             {
@@ -335,7 +335,7 @@ namespace MidtermLeftOrRight
         }
         public void EncounterOneCheckWithoutGawain()
         {
-            DiceRoll.Roll();
+            int Roll = DiceRoll.Roll();
 
             if (Roll >= 7)
             {
@@ -419,7 +419,7 @@ namespace MidtermLeftOrRight
         }
         public void EncounterTwoCheckWithGawain()
         {
-            DiceRoll.Roll();
+            int Roll = DiceRoll.Roll();
 
             if (Roll >= 10)
             {
@@ -464,7 +464,7 @@ namespace MidtermLeftOrRight
         }
         public void EncounterTwoCheckWithoutGawain()
         {
-            DiceRoll.Roll();
+            int Roll = DiceRoll.Roll();
 
             if (Roll >= 10)
             {
@@ -572,7 +572,7 @@ namespace MidtermLeftOrRight
         }
         public void EncounterThreeCheckWithGawain()
         {
-            DiceRoll.Roll();
+            int Roll = DiceRoll.Roll();
 
             if (Roll >= 13)
             {
@@ -639,7 +639,7 @@ namespace MidtermLeftOrRight
         }
         public void EncounterThreeCheckWithoutGawain()
         {
-            DiceRoll.Roll();
+            int Roll = DiceRoll.Roll();
 
             if (Roll >= 13)
             {
