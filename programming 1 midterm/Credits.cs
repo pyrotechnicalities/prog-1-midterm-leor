@@ -15,8 +15,11 @@ namespace MidtermLeftOrRight
         }
         public void CreditsForThePlayer()
         {
-            // code and story: Leo Richnofsky
-            // some code assistance provided by Dominic F
+            Clear();
+            WriteLine("Coded by: Leo Richnofsky");
+            WriteLine("Scenario writing by: Leo Richnofsky");
+            WriteLine("Additional coding assistance by: Dominic F");
+            WriteLine("\n\nThank you for playing!");
         }
     }
 }

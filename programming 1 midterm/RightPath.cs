@@ -326,13 +326,13 @@ namespace MidtermLeftOrRight
 
                 if (responseEncounterChoice3 == "2")
                 {
-                    tasks.Remove("2. Clear cobwebs from the rafters of Greg’s house");
-                    EncounterTwo();
+                        tasks.Remove("2. Clear cobwebs from the rafters of Greg’s house");
+                        EncounterTwo();
                 }
                 else if (responseEncounterChoice3 == "3")
                 {
-                    tasks.Remove("3. Build a fence for Darcey");
-                    EncounterThree();
+                        tasks.Remove("3. Build a fence for Darcey");
+                        EncounterThree();
                 }
                 else
                 {
@@ -479,13 +479,13 @@ namespace MidtermLeftOrRight
 
                 if (responseEncounterChoice4 == "1")
                 {
-                    tasks.Remove("1. Save Elle's cat ");
-                    EncounterOne();
+                        tasks.Remove("1. Save Elle's cat ");
+                        EncounterOne();
                 }
                 else if (responseEncounterChoice4 == "3")
                 {
-                    tasks.Remove("3. Build a fence for Darcey");
-                    EncounterThree();
+                        tasks.Remove("3. Build a fence for Darcey");
+                        EncounterThree();
                 }
                 else
                 {
@@ -655,13 +655,13 @@ namespace MidtermLeftOrRight
 
                 if (responseEncounterChoice5 == "1")
                 {
-                    tasks.Remove("1. Save Elle's cat ");
-                    EncounterOne();
+                        tasks.Remove("1. Save Elle's cat ");
+                        EncounterOne();
                 }
                 else if (responseEncounterChoice5 == "2")
                 {
-                    tasks.Remove("2. Clear cobwebs from the rafters of Greg’s house");
-                    EncounterTwo();
+                        tasks.Remove("2. Clear cobwebs from the rafters of Greg’s house");
+                        EncounterTwo();
                 }
                 else
                 {
